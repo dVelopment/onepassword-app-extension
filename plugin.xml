@@ -1,0 +1,26 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="com.agilebits.onepassword-app-extension" version="1.5">
+<name>1Password Extension</name>
+<description>1Password Extension plugin for Cordova</description>
+<license>MIT License</license>
+<keywords>1Password, App, Extension, API</keywords>
+<author email="support+appex@agilebits.com" href="https://github.com/AgileBits/onepassword-app-extension">AgileBits</author>
+<engines>
+<engine name="cordova-ios" version=">=3.0.0"/>
+</engines>
+<!--  iOS  -->
+<platform name="ios">
+<config-file target="config.xml" parent="/*">
+<feature name="1Password Extension">
+<param name="ios-package" value="1PasswordExtensionCordova"/>
+<param name="onload" value="true"/>
+</feature>
+</config-file>
+<header-file src="OnePasswordExtension.h"/>
+<source-file src="OnePasswordExtension.m"/>
+<asset src="1Password.xcassets" target="1Password.xcassets"/>
+<framework src="UIKit.framework"/>
+<framework src="WebKit.framework" weak="true"/>
+</platform>
+</plugin>
+
